@@ -1,0 +1,28 @@
+.addTask{
+
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin : 20px auto;
+  vertical-align: middle;
+    .inputBox{
+        font-size: 1.05rem;
+        width: 70%;
+        height: 50px;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        border: 1px solid black;
+        padding-left: 20px;
+    }
+    .addButton{
+      font-size: .9rem;
+      padding : 15px 20px;
+      margin-left: 2%;
+      text-transform: uppercase;
+    }
+}

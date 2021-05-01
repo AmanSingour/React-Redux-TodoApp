@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,MAAM;EACd,aAAa,EAAE,MAAM;EACrB,eAAe,EAAE,MAAM;EACvB,cAAc,EAAE,MAAM;CACzB",
+    "sources": [
+        "ShowTodo.module.scss"
+    ],
+    "names": [],
+    "file": "ShowTodo.module.css"
+}
