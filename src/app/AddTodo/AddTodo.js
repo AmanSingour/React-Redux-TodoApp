@@ -1,8 +1,14 @@
 import React from 'react';
 import style from './AddTodo.module.css'
 
+import {  addTodo  } from '../../actions/addTodo'
+import { useDispatch } from 'react-redux';
+
 //AddTodo() METHOD IS DEFINED TO ADD NEW TASK IN TODO LIST;
 const AddTodo = () =>{
+
+    //GET DISPATCH METHOD
+    const dispatch = useDispatch()
 
     //task STATE TO GET NEW TASK THIS WILL UPDATE ON STORE;
     const [ task, setTask ] = React.useState('')  
@@ -26,6 +32,11 @@ const AddTodo = () =>{
 
     }
 
+    const handleClick = (task) =>{
+        dispatch(addTodo(task))
+        
+    }
+
     return(
         <div className={style.addTask}>
             <input 
@@ -35,9 +46,10 @@ const AddTodo = () =>{
                 onChange={(e) => validate(e)}
             />
             <button 
+                type="submit"
                 className={style.addButton}
                 disabled={isValid}
-                onClick={() => console.log(task)}//CALL DISPATCH METHOD
+                onClick={() => }//CALL DISPATCH METHOD
             >
             Add Task
             </button>

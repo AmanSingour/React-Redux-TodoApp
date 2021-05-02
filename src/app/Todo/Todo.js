@@ -11,7 +11,7 @@ const Todo = props =>{
         <div className={style.todo}>
             <span>{props.task}</span>
             <span>{props.time}</span>
-            <button onClick={(e) => deleteTask(e, props.key)}>Delete</button>
+            <button onClick={(e) => deleteTask(e)}>Delete</button>
             <button>Complete</button>
         </div>
     )

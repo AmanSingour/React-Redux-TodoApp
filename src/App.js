@@ -5,6 +5,7 @@ import ShowTodo from './app/ShowTodo/ShowTodo'
 const App = () =>{
   return(
     <div>
+      <h1>Todos</h1>
       <AddTodo />
       <ShowTodo />
     </div>

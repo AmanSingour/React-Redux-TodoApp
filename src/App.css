@@ -9,6 +9,12 @@
   pointer-events: none;
 }
 
+h1{
+  margin: 10px auto;
+  align-content: center;
+  justify-content: center;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-float infinite 3s ease-in-out;
