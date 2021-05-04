@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/React-Redux-TodoApp/static/css/main.c1f60d42.chunk.css",
+    "main.js": "/React-Redux-TodoApp/static/js/main.b73e9fc0.chunk.js",
+    "main.js.map": "/React-Redux-TodoApp/static/js/main.b73e9fc0.chunk.js.map",
+    "runtime-main.js": "/React-Redux-TodoApp/static/js/runtime-main.e34189d1.js",
+    "runtime-main.js.map": "/React-Redux-TodoApp/static/js/runtime-main.e34189d1.js.map",
+    "static/js/2.28070a41.chunk.js": "/React-Redux-TodoApp/static/js/2.28070a41.chunk.js",
+    "static/js/2.28070a41.chunk.js.map": "/React-Redux-TodoApp/static/js/2.28070a41.chunk.js.map",
+    "index.html": "/React-Redux-TodoApp/index.html",
+    "static/css/main.c1f60d42.chunk.css.map": "/React-Redux-TodoApp/static/css/main.c1f60d42.chunk.css.map",
+    "static/js/2.28070a41.chunk.js.LICENSE.txt": "/React-Redux-TodoApp/static/js/2.28070a41.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e34189d1.js",
+    "static/js/2.28070a41.chunk.js",
+    "static/css/main.c1f60d42.chunk.css",
+    "static/js/main.b73e9fc0.chunk.js"
+  ]
+}
