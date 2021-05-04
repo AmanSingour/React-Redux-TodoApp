@@ -3,7 +3,7 @@ const todos = (state = [] , action ) =>{
         //ADD NEW TASK
         case 'ADD_TODO':
 
-            return state.concat([action.payload])
+            return [action.payload].concat(state)
         //DELETE TASK
         case 'DELETE_TODO':
 

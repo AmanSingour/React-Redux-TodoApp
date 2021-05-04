@@ -1,29 +1,14 @@
 import React from 'react';
-import style from './ShowTodo.module.css';
-import Todo from '../Todo/Todo';
+import Todo from '../../components/Todo/Todo';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteTodo } from '../../actions/deleteTodo';
 import { completeTask } from '../../actions/completeTask';
-import { Container, Snackbar } from '@material-ui/core';
+import { 
+    Container, 
+    Snackbar 
+} from '@material-ui/core';
 import { Alert } from '@material-ui/lab';
-
-var list = [
-    {
-        task: "Wake Up",
-        date: "01/05/2021",
-        time: "9:00 AM"
-    },
-    {
-        task: "Take a Bath",
-        date: "30/04/2021",
-        time: "8:00 AM"
-    },
-    {
-        task: "Office Meeting",
-        date: "02/05/2021",
-        time: "10:00 AM"
-    },
-]
+import StackGrid, { easings, transitions } from 'react-stack-grid';
 
 const ShowTodo = () =>{
     
@@ -54,7 +39,8 @@ const ShowTodo = () =>{
             <Todo 
                 key={index}
                 task={data.task} 
-                time={data.time + " " + data.date} 
+                time={data.date + " " + data.time} 
+                bgColor={data.bgcolor}
                 completed={data.completed}
                 onDelete={() => onDelete(data.ID)}
                 onComplete={() => dispatch(completeTask(data.ID))}
@@ -63,11 +49,25 @@ const ShowTodo = () =>{
 
     return(
 
-        <Container maxWidth="sm" className={style.showTodo}>
+        <Container  maxWidth="lg" >
+            <StackGrid 
+                columnWidth={280}
+                duration={600}
+                gutterWidth={15}
+                gutterHeight={15}  
+                easing={easings.cubicOut}
+                appearDelay={60}
+                appear={transitions.appear}
+                appeared={transitions.appeared}
+                enter={transitions.enter}
+                entered={transitions.entered}
+                leaved={transitions.leaved}  
+            >
             {todoList.length>0 ? TodoList :
                 <span>Yay! No Todo</span>
             }
 
+            </StackGrid>
             <Snackbar anchorOrigin={{ vertical: 'top', horizontal:'center' }} open={success} autoHideDuration={3000} onClose={handleClose}>
                 <Alert onClose={handleClose} severity="warning">
                     Task Successfully Deleted!

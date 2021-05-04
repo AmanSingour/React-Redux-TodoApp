@@ -1,18 +1,24 @@
 .App {
   text-align: center;
   width: 100vw;
-  height: 100%;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 100vh;
+  background-color: '#eee';
+  align-content: center;
+  justify-content: center;
+  padding: 0 auto;
 }
 
 h1{
-  margin: 10px auto;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  margin: 20px auto 40px;
   align-content: center;
   justify-content: center;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
 }
 
 @media (prefers-reduced-motion: no-preference) {
