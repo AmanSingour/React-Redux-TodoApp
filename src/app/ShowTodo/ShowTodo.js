@@ -66,7 +66,9 @@ const ShowTodo = () =>{
             >{TodoList} 
             </StackGrid>
             :
-                <span style={{width:'70%', textAlign:'center', margin: '0 auto'}}>Yay! No Todo</span>
+                <div style={{width:'100%', textAlign:'center', margin: '0 auto'}}>
+                    <span>Yay! No Todo</span>
+                </div>
             }
             <Snackbar anchorOrigin={{ vertical: 'top', horizontal:'center' }} open={success} autoHideDuration={3000} onClose={handleClose}>
                 <Alert onClose={handleClose} severity="warning">
