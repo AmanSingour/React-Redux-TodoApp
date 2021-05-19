@@ -1,9 +1,10 @@
-import React from 'react'
+import React, {Suspense} from 'react'
 import { useDispatch } from 'react-redux'
 import { addTodo } from './actions/addTodo'
 import AddTodo from './app/AddTodo/AddTodo'
-import ShowTodo from './app/ShowTodo/ShowTodo'
 import styles from './App.css'
+const ShowTodo = React.lazy(() => import('./app/ShowTodo/ShowTodo'))
+
 
 var list = [
   {
@@ -48,9 +49,15 @@ const App = () =>{
 
   return(
     <div className={styles.App}>
-      <h1>Todos</h1>
-      <AddTodo />
-      <ShowTodo />
+      <div className={styles.center}>
+        <div className={styles.fixed}>
+          <h1>Todos</h1>
+          <AddTodo />
+        </div>
+        <Suspense fallback={<div>Loading...</div>}> 
+          <ShowTodo />
+        </Suspense>
+      </div>
     </div>
   )
 }

@@ -1,11 +1,17 @@
 .App {
-  text-align: center;
   width: 100vw;
-  height: 100vh;
+  text-align: center;
   background-color: '#eee';
   align-content: center;
   justify-content: center;
   padding: 0 auto;
+}
+
+.center{
+  max-width: 70%;
+  margin: 30px auto;
+  align-items: center;
+  justify-content: center;
 }
 
 h1{
@@ -16,9 +22,12 @@ h1{
   align-content: center;
   justify-content: center;
   text-align: center;
-  position: sticky;
-  top: 0;
   z-index: 5;
+}
+
+.fixed{
+  top: 0;
+  position: fixed;
 }
 
 @media (prefers-reduced-motion: no-preference) {

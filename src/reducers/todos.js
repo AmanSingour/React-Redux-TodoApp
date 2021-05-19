@@ -15,7 +15,7 @@ const todos = (state = [] , action ) =>{
             //CLOANING STATE ARRAY TO ANOTHER ARRAY
             const newArray = [...state]
             //CHANGING VALUE OF GIVEN TODO'S 
-            newArray[index].completed = true
+            newArray[index].completed = !state[index].completed
             return newArray
     
         default:

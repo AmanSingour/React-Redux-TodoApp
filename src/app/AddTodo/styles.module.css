@@ -1,0 +1,15 @@
+.container {
+  width: 100%;
+}
+
+.container .input {
+  max-width: 70%;
+  margin: 30px auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=styles.module.css.map */

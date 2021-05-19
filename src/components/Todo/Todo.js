@@ -36,22 +36,14 @@ const Todo = props =>{
                 subheader={props.time}
             />
             <CardActions>
-                {!props.completed ?
+                
                     <Button
                         size="small" color="primary" 
                         aria-label="complete"
                         onClick={(e) => onComplete(e)}
                     >
-                        MARK AS COMPLETE
+                        {!props.completed ? `MARK AS COMPLETE` : `UNMARK`}
                     </Button> 
-                :
-                    <Button 
-                        size="small" color="#00f"
-                        aria-label="complete"
-                    >
-                        COMPLETED
-                    </Button>
-                }
                 <Button 
                     size="small"
                     color="secondary" 

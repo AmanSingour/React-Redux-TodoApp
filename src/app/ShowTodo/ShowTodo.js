@@ -49,25 +49,25 @@ const ShowTodo = () =>{
 
     return(
 
-        <Container  maxWidth="lg" >
+        <Container  maxWidth="lg" style={{marginBottom:'10%'}}>
+            {todoList.length>0 ?
             <StackGrid 
                 columnWidth={280}
                 duration={600}
                 gutterWidth={15}
                 gutterHeight={15}  
                 easing={easings.cubicOut}
-                appearDelay={60}
+                appearDelay={3}
                 appear={transitions.appear}
                 appeared={transitions.appeared}
                 enter={transitions.enter}
                 entered={transitions.entered}
                 leaved={transitions.leaved}  
-            >
-            {todoList.length>0 ? TodoList :
-                <span>Yay! No Todo</span>
-            }
-
+            >{TodoList} 
             </StackGrid>
+            :
+                <span style={{width:'70%', textAlign:'center', margin: '0 auto'}}>Yay! No Todo</span>
+            }
             <Snackbar anchorOrigin={{ vertical: 'top', horizontal:'center' }} open={success} autoHideDuration={3000} onClose={handleClose}>
                 <Alert onClose={handleClose} severity="warning">
                     Task Successfully Deleted!
